@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns:th="http://www.thymeleaf.org"
+<html lang="en" xml:lang="en" xmlns:th="http://www.thymeleaf.org"
 	xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Spring boot email template with Thymeleaf</title>
@@ -16,13 +16,13 @@ body {
 </style>
 </head>
 <body>
-	<p>Hello, <b><span th:text="${name}"></span></b>!!!</p>
+	<p>Hello, <strong><span th:text="${name}"></span></strong>!!!</p>
 	<p th:if="${firstname.length() > 10}">Well! Seems you've got a long name!</p>
 	<p>Congratulations & Thanks, for becoming a valuable contributor to my personal <span th:text="${blogtype}"></span>.</p>
-	<p>Here is your unique contributor id: <b><em th:text="${uniqueid}"></em></b></p>
-	<p>Please click here for my personal <b><a th:href="${repo}"><span th:text="${blogtype}"></span></a></b>.</p>
+	<p>Here is your unique contributor id: <strong><em th:text="${uniqueid}"></em></strong></p>
+	<p>Please click here for my personal <strong><a th:href="${repo}"><span th:text="${blogtype}"></span></a></strong>.</p>
 	<p>
-		<b>Thanks,</b> <br /> 
+		<strong>Thanks,</strong> <br /> 
 		<em th:text="${sign}"></em> <br/>
 		<span th:text="${location}"></span><br/> 
 		<span th:text="${#dates.format(#dates.createNow(), 'dd MMM yyyy HH:mm')}"></span>

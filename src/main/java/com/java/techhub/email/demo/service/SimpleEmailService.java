@@ -83,7 +83,7 @@ public class SimpleEmailService implements EmailService {
 			}
 		});
 		if (counter.intValue() > 0) {
-			return counter.intValue() + "email(s) sending failed. Please verify logs...!!!";
+			return counter.intValue() + " email(s) sending failed. Please verify logs...!!!";
 		}
 		return "Email(s) sent successfully, Please check your inbox...!!!";
 	}
