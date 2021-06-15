@@ -9,6 +9,11 @@ This is a simple spring application developed using Spring boot to demonstrate t
 mvn clean install
 ```
 
+Build status: [![Maven Package](https://github.com/MaheshIare/spring-boot-mail-demo/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/MaheshIare/spring-boot-mail-demo/actions/workflows/maven-publish.yml)
+
+Sonar status: [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/dashboard?id=MaheshIare_spring-boot-mail-demo)
+
+
 ## Description
 Application consists of a POST API(/email) which accepts sender and receiver information in the request body which includes receiver email-id(s) for sending email(s). 
 Dependencies to be added:
@@ -44,7 +49,6 @@ spring.mail.properties.mail.smtp.ssl.trust=smtp.gmail.com
 spring.mail.properties.mail.smtp.starttls.enable=true
 
 ```
-
 
 ## Contributing
 Thanks much. Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
