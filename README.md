@@ -11,7 +11,6 @@ mvn clean install
 
 ## Description
 Application consists of a POST API(/email) which accepts sender and receiver information in the request body which includes receiver email-id(s) for sending email(s). 
-
 Dependencies to be added:
 
 ```bash
