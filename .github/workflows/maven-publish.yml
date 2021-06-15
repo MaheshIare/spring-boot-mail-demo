@@ -63,8 +63,6 @@ jobs:
       #  env:
       #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to GitHub Packages Apache Maven
+        run: mvn --batch-mode deploy
         env:
-          GITHUB_USERNAME: x-access-token
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run:
-          mvn --settings settings.xml deploy
