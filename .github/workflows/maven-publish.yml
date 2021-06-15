@@ -36,7 +36,7 @@ jobs:
       uses: devmasx/coverage-check-action@v1.2.0
       with:
         # lcov | simplecov
-        type: lcov
+        type: simplecov
         # Github token for create checks
         #token: 
         # Minimum coverage
