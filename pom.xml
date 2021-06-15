@@ -71,7 +71,6 @@
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>GitHub MaheshIare Apache Maven Packages</name>
 			<url>https://maven.pkg.github.com/MaheshIare/spring-boot-email-demo</url>
 		</repository>
 	</distributionManagement>
