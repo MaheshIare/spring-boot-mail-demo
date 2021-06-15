@@ -12,14 +12,20 @@ import com.java.techhub.email.demo.service.EmailService;
  *
  */
 @SpringBootTest
-public class EmailServiceTest {
+class EmailServiceTest {
 
 	@Autowired
 	private EmailService emailService;
 	
 	@Test
-	public void testSendEmail() throws Exception {
-		String response = emailService.sendEmail(UserUtil.getUser());
+	void testSendEmail() throws Exception {
+		String response = emailService.sendEmail(UserUtil.getUser(true));
 		Assertions.assertEquals("1 email(s) sending failed. Please verify logs...!!!",	 response);
+	}
+	
+	@Test
+	void testSendEmailWithoutTargets() throws Exception {
+		String response = emailService.sendEmail(UserUtil.getUser(false));
+		Assertions.assertEquals("Email(s) sent successfully, Please check your inbox...!!!",	 response);
 	}
 }

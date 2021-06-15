@@ -18,13 +18,15 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public final class UserUtil {
 
-	public User getUser() {
+	public User getUser(boolean addTargets) {
 		User user = new User();
         user.setFirstName("First");
         user.setLastName("Last");
         user.setLocation("IND");
         List<TargetEmail> list = new ArrayList<>();
-        list.add(new TargetEmail("First", "Last", "first.last@gmail.com"));
+        if(addTargets) {
+            list.add(new TargetEmail("First", "Last", "first.last@gmail.com"));
+        }
         user.setEmails(list);
         return user;
 	}
