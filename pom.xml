@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.java.techhub</groupId>
 	<artifactId>spring-boot-email-demo</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-boot-email-demo</name>
 	<description>Simple spring boot application integrated with spring mail service for sending out emails</description>
 	<properties>
@@ -20,6 +20,13 @@
 		<sonar.organization>maheshkumar-gutam</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
+	
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/MaheshIare/spring-boot-mail-demo</url>
+		</repository>
+	</distributionManagement>
 	
 	<dependencies>
 		<dependency>
