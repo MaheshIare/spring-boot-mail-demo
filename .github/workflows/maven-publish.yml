@@ -19,30 +19,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 11
+    - name: Set up JDK 8
       uses: actions/setup-java@v2
       with:
-        java-version: '11'
+        java-version: 1.8
         distribution: 'adopt'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-      
-    - name: Coverage check
-      # You may pin to the exact commit or the version.
-      # uses: devmasx/coverage-check-action@4a754f8957c6824e0a0d44bf9168fdbdf47e7e2f
-      uses: devmasx/coverage-check-action@v1.2.0
-      with:
-        # lcov | simplecov
-        type: simplecov
-        # Github token for create checks
-        #token: 
-        # Minimum coverage
-        min_coverage: 80
-        # Json with coverage result
-        #result_path: 
     
     - name: Publish to GitHub Packages Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
